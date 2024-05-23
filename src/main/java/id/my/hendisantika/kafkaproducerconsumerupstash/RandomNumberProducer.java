@@ -32,7 +32,7 @@ public class RandomNumberProducer {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 10000)
     public void produce() throws UnknownHostException {
         int random = ThreadLocalRandom.current().nextInt(MIN, MAX);
         this.kafkaTemplate.sendDefault(String.valueOf(random));
