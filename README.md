@@ -16,6 +16,14 @@ Let’s run the application.
 Forming the Kafka Cluster in Upstash:
 a. Login to https://console.upstash.com/kafka and create a cluster
 
+![Create Cluster](img/cluster.png "Create Cluster")
+
 b. Create topics in cluster
+
+![Create topics in cluster](img/topic.png "Create topics in cluster")
+
+c. Monitoring the messages
+
+![Monitoring the messages](img/logs.png "Monitoring the messages")
 
 And that’s it. Thank you for reading. Please do not hesitate to send comments, ideas and make corrections.
