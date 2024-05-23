@@ -3,7 +3,14 @@ spring:
     name: kafka-producer-consumer-upstash
   kafka:
     bootstrap-servers:
-      - localhost:9091
+      - honest-hippo-7391-eu2-kafka.upstash.io:9092
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: SCRAM-SHA-256
+        jaas:
+          config: org.apache.kafka.common.security.scram.ScramLoginModule required username="${UPSTASH_USERNAME}" password="${UPSTASH_PASSWORD}";
     template:
       default-topic: random-number
     producer:
